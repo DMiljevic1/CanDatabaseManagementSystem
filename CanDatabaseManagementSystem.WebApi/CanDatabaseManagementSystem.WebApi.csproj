@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj" />
+    <ProjectReference Include="..\CanDatabaseManagementSystem.IOC\CanDatabaseManagementSystem.IOC.csproj" />
     <ProjectReference Include="..\DomainModels\DomainModels.csproj" />
   </ItemGroup>
 

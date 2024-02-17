@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.WebApi", "CanDatabaseManagementSystem.WebApi\CanDatabaseManagementSystem.WebApi.csproj", "{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanDatabaseManagementSystem.BlazorServer", "CanDatabaseManagementSystem.BlazorServer\CanDatabaseManagementSystem.BlazorServer.csproj", "{EA6183BB-2F60-4809-B09B-09D154E76D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.BlazorServer", "CanDatabaseManagementSystem.BlazorServer\CanDatabaseManagementSystem.BlazorServer.csproj", "{EA6183BB-2F60-4809-B09B-09D154E76D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModels", "DomainModels\DomainModels.csproj", "{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EA6183BB-2F60-4809-B09B-09D154E76D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA6183BB-2F60-4809-B09B-09D154E76D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA6183BB-2F60-4809-B09B-09D154E76D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.BlazorServer", "CanDatabaseManagementSystem.BlazorServer\CanDatabaseManagementSystem.BlazorServer.csproj", "{EA6183BB-2F60-4809-B09B-09D154E76D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainModels", "DomainModels\DomainModels.csproj", "{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModels", "DomainModels\DomainModels.csproj", "{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanDatabaseManagementSystem.DAL", "CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj", "{02852A8E-F079-4912-A1DA-E4A5DDD28470}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

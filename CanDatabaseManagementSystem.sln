@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.API", "CanDatabaseManagementSystem.WebApi\CanDatabaseManagementSystem.API.csproj", "{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.WebApi", "CanDatabaseManagementSystem.WebApi\CanDatabaseManagementSystem.WebApi.csproj", "{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.BlazorServer", "CanDatabaseManagementSystem.BlazorServer\CanDatabaseManagementSystem.BlazorServer.csproj", "{EA6183BB-2F60-4809-B09B-09D154E76D26}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModels", "DomainModel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.DAL", "CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj", "{02852A8E-F079-4912-A1DA-E4A5DDD28470}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanDatabaseManagementSystem.IOC", "CanDatabaseManagementSystem.IOC\CanDatabaseManagementSystem.IOC.csproj", "{86C8683F-F404-4096-8282-B26ADE166688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.IOC", "CanDatabaseManagementSystem.IOC\CanDatabaseManagementSystem.IOC.csproj", "{86C8683F-F404-4096-8282-B26ADE166688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

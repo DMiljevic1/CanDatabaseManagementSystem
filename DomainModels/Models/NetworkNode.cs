@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DomainModels.Models
 {
-	internal class NetworkNode
+	public class NetworkNode
 	{
-	}
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
 }

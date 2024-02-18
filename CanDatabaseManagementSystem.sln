@@ -5,13 +5,15 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.WebApi", "CanDatabaseManagementSystem.WebApi\CanDatabaseManagementSystem.WebApi.csproj", "{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.BlazorServer", "CanDatabaseManagementSystem.BlazorServer\CanDatabaseManagementSystem.BlazorServer.csproj", "{EA6183BB-2F60-4809-B09B-09D154E76D26}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModels", "DomainModels\DomainModels.csproj", "{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.DAL", "CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj", "{02852A8E-F079-4912-A1DA-E4A5DDD28470}"
 EndProject
+<<<<<<< HEAD
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.IOC", "CanDatabaseManagementSystem.IOC\CanDatabaseManagementSystem.IOC.csproj", "{86C8683F-F404-4096-8282-B26ADE166688}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanDatabaseManagementSystem.UI", "CanDatabaseManagementSystem.UI\CanDatabaseManagementSystem.UI.csproj", "{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}"
+>>>>>>> 8aee8bd (renamed frontend project)
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +25,6 @@ Global
 		{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA6183BB-2F60-4809-B09B-09D154E76D26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA6183BB-2F60-4809-B09B-09D154E76D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA6183BB-2F60-4809-B09B-09D154E76D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA6183BB-2F60-4809-B09B-09D154E76D26}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -35,10 +33,17 @@ Global
 		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{86C8683F-F404-4096-8282-B26ADE166688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86C8683F-F404-4096-8282-B26ADE166688}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C8683F-F404-4096-8282-B26ADE166688}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C8683F-F404-4096-8282-B26ADE166688}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 8aee8bd (renamed frontend project)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  candatabasemanagementsystem.webapi:
+    image: ${DOCKER_REGISTRY-}candatabasemanagementsystemwebapi
+    build:
+      context: .
+      dockerfile: CanDatabaseManagementSystem.WebApi/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: db
+    hostname: db
+    environment:
+      ACCEPT_EULA: Y
+      USER: sa
+      SA_PASSWORD: CanDatabase111
+    ports:
+        - 1433:1433
+    volumes:
+      - mssql_data:/var/opt/mssql
+volumes:
+  mssql_data:

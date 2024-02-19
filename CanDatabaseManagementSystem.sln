@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModels", "DomainModel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.DAL", "CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj", "{02852A8E-F079-4912-A1DA-E4A5DDD28470}"
 EndProject
-<<<<<<< HEAD
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.IOC", "CanDatabaseManagementSystem.IOC\CanDatabaseManagementSystem.IOC.csproj", "{86C8683F-F404-4096-8282-B26ADE166688}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanDatabaseManagementSystem.UI", "CanDatabaseManagementSystem.UI\CanDatabaseManagementSystem.UI.csproj", "{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}"
->>>>>>> 8aee8bd (renamed frontend project)
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.UI", "CanDatabaseManagementSystem.UI\CanDatabaseManagementSystem.UI.csproj", "{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{141A3316-D018-441A-B0F6-C25CF0A7C6C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,17 +33,18 @@ Global
 		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02852A8E-F079-4912-A1DA-E4A5DDD28470}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
 		{86C8683F-F404-4096-8282-B26ADE166688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{86C8683F-F404-4096-8282-B26ADE166688}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86C8683F-F404-4096-8282-B26ADE166688}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86C8683F-F404-4096-8282-B26ADE166688}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
 		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A1DFEA-E96F-42C1-A743-4699E84CAFB9}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> 8aee8bd (renamed frontend project)
+		{141A3316-D018-441A-B0F6-C25CF0A7C6C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{141A3316-D018-441A-B0F6-C25CF0A7C6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{141A3316-D018-441A-B0F6-C25CF0A7C6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{141A3316-D018-441A-B0F6-C25CF0A7C6C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

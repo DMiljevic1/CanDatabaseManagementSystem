@@ -1,4 +1,5 @@
 ﻿using CanDatabaseManagementSystem.DAL.DatabaseContext;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,12 @@ namespace CanDatabaseManagementSystem.IOC
 		{
 			
 		}
+		public static void ApplyMigrations(this IApplicationBuilder app)
+		{
+			using IServiceScope scope = app.ApplicationServices.CreateScope();
+			using CanDatabaseContext dbContext = scope.ServiceProvider.GetRequiredService<CanDatabaseContext>();
 
+			dbContext.Database.Migrate();
+		}
 	}
 }

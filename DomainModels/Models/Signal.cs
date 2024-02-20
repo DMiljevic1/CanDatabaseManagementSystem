@@ -12,5 +12,7 @@ namespace DomainModels.Models
 		public string Name { get; set; }
         public int StartBit { get; set; }
         public int Lenght { get; set; }
+        public int MessageId { get; set; }
+        public virtual Message? Message { get; set; }
     }
 }

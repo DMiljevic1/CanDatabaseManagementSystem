@@ -10,5 +10,8 @@ namespace DomainModels.Models
 	{
         public int Id { get; set; }
         public string Name { get; set; }
-    }
+        public int DbcFileId { get; set; }
+        public virtual DbcFile? DbcFile { get; set; }
+		public ICollection<Signal> Signals { get; private set; } = new List<Signal>();
+	}
 }

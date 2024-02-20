@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace DomainModels.Models
 {
-	public class NetworkNode
+	public class DbcFile
 	{
         public int Id { get; set; }
         public string Name { get; set; }
-        public int DbcFileId { get; set; }
-        public virtual DbcFile? DbcFile { get; set; }
     }
 }

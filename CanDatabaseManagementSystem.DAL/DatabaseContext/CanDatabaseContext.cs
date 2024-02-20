@@ -15,5 +15,6 @@ namespace CanDatabaseManagementSystem.DAL.DatabaseContext
 		public DbSet<NetworkNode> NetworkNodes { get; set; }
 		public DbSet<Message> Messages { get; set; }
 		public DbSet<Signal> Signals { get; set; }
+		public DbSet<DbcFile> DbcFiles { get; set; }
 	}
 }

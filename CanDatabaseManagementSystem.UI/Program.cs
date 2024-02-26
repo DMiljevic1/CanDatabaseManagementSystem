@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
-
+builder.Services.AddScoped<HttpClient>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

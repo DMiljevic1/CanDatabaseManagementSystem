@@ -1,3 +1,5 @@
+using CanDatabaseManagementSystem.UI.IServices;
+using CanDatabaseManagementSystem.UI.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using MudBlazor.Services;
@@ -9,6 +11,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
 builder.Services.AddScoped<HttpClient>();
+builder.Services.AddScoped<IDbcFileService, DbcFileService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

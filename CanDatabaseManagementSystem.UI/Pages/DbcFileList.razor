@@ -1,4 +1,22 @@
 ﻿@page "/"
 @inherits RazorPageBases.DbcFileListBase;
 
-
+<MudTable Items="@dbcFiles">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Dbc Files</MudText>
+        <MudSpacer />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>Dbc File Name</MudTh>
+        <MudTh>Message</MudTh>
+        <MudTh>Signal</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Dbc File Name">@context.Name</MudTd>
+            <MudTd DataLabel="Message">@context.Messages</MudTd>
+            <MudTd DataLabel="Signal">@context.Messages</MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>

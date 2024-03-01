@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\CanDatabaseManagementSystem.Common\CanDatabaseManagementSystem.Common.csproj" />
     <ProjectReference Include="..\..\CanDatabaseManagementSystem.Contract\CanDatabaseManagementSystem.Contract.csproj" />
     <ProjectReference Include="..\CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj" />
     <ProjectReference Include="..\CanDatabaseManagementSystem.IOC\CanDatabaseManagementSystem.IOC.csproj" />

@@ -13,6 +13,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using CanDatabaseManagementSystem.Service;
+using AutoMapper;
+using CanDatabaseManagementSystem.Service.Mapping;
 
 namespace CanDatabaseManagementSystem.IOC
 {
@@ -33,6 +35,11 @@ namespace CanDatabaseManagementSystem.IOC
 
 		private static void ConfigureApplicationServices(IServiceCollection services, IConfiguration configuration)
 		{
+			var mappingConfig = new MapperConfiguration(mc =>
+			{
+				mc.AddProfile(new DbcFileProfile());
+			});
+			services.AddSingleton(mappingConfig.CreateMapper());
 			services.AddScoped<IDbcFileService, DbcFileService>();
 		}
 		public static void ApplyMigrations(this IApplicationBuilder app)

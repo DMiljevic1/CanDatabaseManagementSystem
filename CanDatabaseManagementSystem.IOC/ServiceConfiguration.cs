@@ -1,4 +1,7 @@
-﻿using CanDatabaseManagementSystem.DAL.DatabaseContext;
+﻿using CanDatabaseManagementSystem.Contract;
+using CanDatabaseManagementSystem.DAL.DatabaseContext;
+using CanDatabaseManagementSystem.DAL.Repositories;
+using DomainModels.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -9,6 +12,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using CanDatabaseManagementSystem.Service;
+using AutoMapper;
+using CanDatabaseManagementSystem.Service.Mapping;
 
 namespace CanDatabaseManagementSystem.IOC
 {
@@ -24,11 +30,20 @@ namespace CanDatabaseManagementSystem.IOC
 			services.AddDbContext<CanDatabaseContext>(options => options.UseSqlServer(
 			configuration.GetConnectionString("CanDatabaseConnection")
 			));
+			services.AddScoped<IDbcFileRepository, DbcFileRepository>();
+			services.AddScoped<IMessageRepository, MessageRepository>();
 		}
 
 		private static void ConfigureApplicationServices(IServiceCollection services, IConfiguration configuration)
 		{
-			
+			var mappingConfig = new MapperConfiguration(mc =>
+			{
+				mc.AddProfile(new DbcFileProfile());
+				mc.AddProfile(new MessageProfile());
+			});
+			services.AddSingleton(mappingConfig.CreateMapper());
+			services.AddScoped<IDbcFileService, DbcFileService>();
+			services.AddScoped<IMessageService, MessageService>();
 		}
 		public static void ApplyMigrations(this IApplicationBuilder app)
 		{

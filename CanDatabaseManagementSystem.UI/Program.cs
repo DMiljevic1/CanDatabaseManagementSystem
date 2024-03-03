@@ -1,3 +1,5 @@
+using CanDatabaseManagementSystem.UI.IServices;
+using CanDatabaseManagementSystem.UI.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using MudBlazor.Services;
@@ -8,7 +10,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
-
+builder.Services.AddScoped(provider =>
+{
+    var handler = new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+    };
+    var httpClient = new HttpClient(handler);
+    return httpClient;
+});
+builder.Services.AddScoped<IDbcFileService, DbcFileService>();
+builder.Services.AddScoped<IMessageService, MessageService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

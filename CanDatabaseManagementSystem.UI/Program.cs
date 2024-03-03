@@ -20,6 +20,7 @@ builder.Services.AddScoped(provider =>
     return httpClient;
 });
 builder.Services.AddScoped<IDbcFileService, DbcFileService>();
+builder.Services.AddScoped<IMessageService, MessageService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

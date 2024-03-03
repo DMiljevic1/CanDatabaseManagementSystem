@@ -15,7 +15,7 @@ namespace CanDatabaseManagementSystem.WebApi.Controllers
             _messageService = messageService;
         }
 
-        [HttpGet]
+        [HttpGet("{dbcFileId:int}")]
         public async Task<IActionResult> GetMessages(int dbcFileId, CancellationToken cancellationToken)
         {
             try

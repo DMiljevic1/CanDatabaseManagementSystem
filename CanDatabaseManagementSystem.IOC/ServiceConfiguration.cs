@@ -31,6 +31,7 @@ namespace CanDatabaseManagementSystem.IOC
 			configuration.GetConnectionString("CanDatabaseConnection")
 			));
 			services.AddScoped<IDbcFileRepository, DbcFileRepository>();
+			services.AddScoped<IMessageRepository, MessageRepository>();
 		}
 
 		private static void ConfigureApplicationServices(IServiceCollection services, IConfiguration configuration)
@@ -42,6 +43,7 @@ namespace CanDatabaseManagementSystem.IOC
 			});
 			services.AddSingleton(mappingConfig.CreateMapper());
 			services.AddScoped<IDbcFileService, DbcFileService>();
+			services.AddScoped<IMessageService, MessageService>();
 		}
 		public static void ApplyMigrations(this IApplicationBuilder app)
 		{

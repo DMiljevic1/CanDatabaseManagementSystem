@@ -4,21 +4,22 @@ using Microsoft.AspNetCore.Components;
 
 namespace CanDatabaseManagementSystem.UI.Pages.RazorPageBases
 {
-    public class DbcFileListBase : ComponentBase
+    public class MessageListBase : ComponentBase
     {
         [Inject]
-        public IDbcFileService _dbcFileService { get; set; }
+        public IMessageService _messageService {  get; set; }
         [Inject]
         public NavigationManager _navigationManager { get; set; }
-        protected List<DbcFileDto> dbcFiles { get; set; }
+        [Parameter]
+        public string dbcFileId {  get; set; }
         protected List<MessageDto> messages { get; set; }
-		protected override async Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
         {
-            dbcFiles = await _dbcFileService.GetDbcFiles();
+            messages = await _messageService.GetMessages(int.Parse(dbcFileId));
         }
-        protected void OpenMessageListPage(int dbcFileId)
+        protected void Close()
         {
-            _navigationManager.NavigateTo("MessageList/" + dbcFileId);
+            _navigationManager.NavigateTo("/");
         }
     }
 }

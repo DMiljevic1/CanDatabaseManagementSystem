@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.Service", "..\CanDatabaseManagementSystem.Service\CanDatabaseManagementSystem.Service.csproj", "{4CFD9EF1-7190-46B8-8FB7-8E1A2ED8D6DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanDatabaseManagementSystem.Common", "..\CanDatabaseManagementSystem.Common\CanDatabaseManagementSystem.Common.csproj", "{71A49335-4635-4993-AFBE-35A8D8A76AB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.Common", "..\CanDatabaseManagementSystem.Common\CanDatabaseManagementSystem.Common.csproj", "{71A49335-4635-4993-AFBE-35A8D8A76AB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

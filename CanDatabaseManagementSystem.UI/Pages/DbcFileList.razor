@@ -6,15 +6,16 @@
         <MudText Typo="Typo.h6">Dbc Files</MudText>
         <MudSpacer />
     </ToolBarContent>
+    <NoRecordsContent>
+        No records found.
+    </NoRecordsContent>
     <HeaderContent>
-        <MudTh>Dbc File Name</MudTh>
-        <MudTh>Message</MudTh>
-        <MudTh>Signal</MudTh>
+        <MudTh>Name</MudTh>
+        <MudTh>Messages</MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="Dbc File Name">@context.Name</MudTd>
-            <MudTd DataLabel="Message">@context.Messages</MudTd>
-            <MudTd DataLabel="Signal">@context.Messages</MudTd>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+            <MudButton OnClick="() => OpenMessageListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info">Messages</MudButton>
         </RowTemplate>
         <PagerContent>
             <MudTablePager />

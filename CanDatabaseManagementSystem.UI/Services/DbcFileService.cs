@@ -14,12 +14,7 @@ namespace CanDatabaseManagementSystem.UI.Services
 		}
 		public async Task<List<DbcFileDto>> GetDbcFiles()
 		{
-            var handler = new HttpClientHandler
-            {
-                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-            };
-            var client = new HttpClient(handler);
-            return await client.GetFromJsonAsync<List<DbcFileDto>>($"{_configuration["Endpoints:GetDbcFiles"]}");
+            return await _httpClient.GetFromJsonAsync<List<DbcFileDto>>($"{_configuration["Endpoints:GetDbcFiles"]}");
         }
 	}
 }

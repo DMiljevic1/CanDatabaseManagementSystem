@@ -10,7 +10,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
-builder.Services.AddScoped<HttpClient>();
+builder.Services.AddScoped(provider =>
+{
+    var handler = new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+    };
+    var httpClient = new HttpClient(handler);
+    return httpClient;
+});
 builder.Services.AddScoped<IDbcFileService, DbcFileService>();
 var app = builder.Build();
 

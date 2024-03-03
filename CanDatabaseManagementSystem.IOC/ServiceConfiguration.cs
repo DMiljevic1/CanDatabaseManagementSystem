@@ -38,6 +38,7 @@ namespace CanDatabaseManagementSystem.IOC
 			var mappingConfig = new MapperConfiguration(mc =>
 			{
 				mc.AddProfile(new DbcFileProfile());
+				mc.AddProfile(new MessageProfile());
 			});
 			services.AddSingleton(mappingConfig.CreateMapper());
 			services.AddScoped<IDbcFileService, DbcFileService>();

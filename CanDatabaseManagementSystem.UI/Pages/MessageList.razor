@@ -2,7 +2,7 @@
 @inherits RazorPageBases.MessageListBase;
 
 
-<MudTable Items="@messages">
+<MudTable Items="@messages" Style="width:50%">
     <ToolBarContent>
         <MudText Typo="Typo.h6">Messages</MudText>
         <MudSpacer />
@@ -21,4 +21,9 @@
         <PagerContent>
             <MudTablePager />
         </PagerContent>
-    </MudTable>
+</MudTable>
+<MudGrid Justify="Justify.FlexStart">
+    <MudItem>
+        <MudButton StartIcon="@Icons.Material.Filled.Close" Variant="Variant.Filled" Color="Color.Default" OnClick="Close" Size="Size.Medium" Style="margin-top:30px;">Close</MudButton>
+    </MudItem>
+</MudGrid>

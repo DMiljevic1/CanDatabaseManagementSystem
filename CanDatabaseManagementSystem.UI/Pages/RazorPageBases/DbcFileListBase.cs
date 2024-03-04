@@ -1,6 +1,7 @@
 ﻿using CanDatabaseManagementSystem.Common.DtoModels;
 using CanDatabaseManagementSystem.UI.IServices;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace CanDatabaseManagementSystem.UI.Pages.RazorPageBases
 {
@@ -11,7 +12,6 @@ namespace CanDatabaseManagementSystem.UI.Pages.RazorPageBases
         [Inject]
         public NavigationManager _navigationManager { get; set; }
         protected List<DbcFileDto> dbcFiles { get; set; }
-        protected List<MessageDto> messages { get; set; }
 		protected override async Task OnInitializedAsync()
         {
             dbcFiles = await _dbcFileService.GetDbcFiles();
@@ -19,6 +19,19 @@ namespace CanDatabaseManagementSystem.UI.Pages.RazorPageBases
         protected void OpenMessageListPage(int dbcFileId)
         {
             _navigationManager.NavigateTo("MessageList/" + dbcFileId);
+        }
+        protected async Task UploadDbcFile(InputFileChangeEventArgs e)
+        {
+            var dbcFileData = new DbcFileData();
+            foreach (var file in e.GetMultipleFiles(1))
+            {
+                await using var memoryStream = new MemoryStream();
+                await file.OpenReadStream().CopyToAsync(memoryStream);
+                dbcFileData.Data = memoryStream.ToArray();
+                dbcFileData.FileName = file.Name;
+            }
+            await _dbcFileService.UploadDbcFile(dbcFileData);
+            dbcFiles = await _dbcFileService.GetDbcFiles();
         }
     }
 }

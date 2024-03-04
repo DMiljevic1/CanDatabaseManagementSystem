@@ -1,7 +1,7 @@
 ﻿@page "/"
 @inherits RazorPageBases.DbcFileListBase;
 
-<MudTable Items="@dbcFiles">
+<MudTable Items="@dbcFiles" Style="width:50%">
     <ToolBarContent>
         <MudText Typo="Typo.h6">Dbc Files</MudText>
         <MudSpacer />
@@ -11,11 +11,13 @@
     </NoRecordsContent>
     <HeaderContent>
         <MudTh>Name</MudTh>
-        <MudTh>Messages</MudTh>
+        <MudTh></MudTh>
     </HeaderContent>
     <RowTemplate>
         <MudTd DataLabel="Name">@context.Name</MudTd>
-            <MudButton OnClick="() => OpenMessageListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info">Messages</MudButton>
+        <MudTd>
+            <MudButton OnClick="() => OpenMessageListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info" Size="Size.Small">Messages</MudButton>
+        </MudTd>
         </RowTemplate>
         <PagerContent>
             <MudTablePager />

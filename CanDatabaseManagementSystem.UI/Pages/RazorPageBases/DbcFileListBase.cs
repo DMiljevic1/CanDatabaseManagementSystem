@@ -27,7 +27,8 @@ namespace CanDatabaseManagementSystem.UI.Pages.RazorPageBases
             {
                 await using var memoryStream = new MemoryStream();
                 await file.OpenReadStream().CopyToAsync(memoryStream);
-                dbcFileData.Data = memoryStream.ToArray();
+                var byteArray = memoryStream.ToArray();
+                dbcFileData.Data = System.Text.Encoding.Default.GetString(byteArray);
                 dbcFileData.FileName = file.Name;
             }
             await _dbcFileService.UploadDbcFile(dbcFileData);

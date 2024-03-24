@@ -32,6 +32,7 @@ namespace CanDatabaseManagementSystem.IOC
 			));
 			services.AddScoped<IDbcFileRepository, DbcFileRepository>();
 			services.AddScoped<IMessageRepository, MessageRepository>();
+			services.AddScoped<ISignalRepository, SignalReporitory>();
 		}
 
 		private static void ConfigureApplicationServices(IServiceCollection services, IConfiguration configuration)
@@ -40,11 +41,13 @@ namespace CanDatabaseManagementSystem.IOC
 			{
 				mc.AddProfile(new DbcFileProfile());
 				mc.AddProfile(new MessageProfile());
+				mc.AddProfile(new SignalProfile());
 			});
 			services.AddSingleton(mappingConfig.CreateMapper());
 			services.AddScoped<IDbcFileService, DbcFileService>();
 			services.AddScoped<IMessageService, MessageService>();
 			services.AddScoped<IDbcFileParserService, DbcFileParserService>();
+			services.AddScoped<ISignalService, SignalService>();
 		}
 		public static void ApplyMigrations(this IApplicationBuilder app)
 		{

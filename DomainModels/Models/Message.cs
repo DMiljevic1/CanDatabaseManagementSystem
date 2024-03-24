@@ -9,6 +9,7 @@ namespace DomainModels.Models
 	public class Message
 	{
         public int Id { get; set; }
+        public long CanMessageId { get; set; }
         public string Name { get; set; }
         public int DbcFileId { get; set; }
         public virtual DbcFile? DbcFile { get; set; }

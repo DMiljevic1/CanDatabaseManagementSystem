@@ -1,0 +1,30 @@
+﻿@page "/SignalList/{dbcFileId}/{messageId}"
+@inherits RazorPageBases.SignalListBase;
+
+<MudTable Items="@signals" Style="width:50%">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Signals</MudText>
+        <MudSpacer />
+    </ToolBarContent>
+    <NoRecordsContent>
+        No records found.
+    </NoRecordsContent>
+    <HeaderContent>
+        <MudTh>Name</MudTh>
+        <MudTh>Start Bit</MudTh>
+        <MudTh>Lenght</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+            <MudTd DataLabel="Name">@context.Name</MudTd>
+            <MudTd DataLabel="Start Bit">@context.StartBit</MudTd>
+            <MudTd DataLabel="Lenght">@context.Lenght</MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+    <MudGrid Justify="Justify.FlexStart">
+        <MudItem>
+            <MudButton StartIcon="@Icons.Material.Filled.Close" Variant="Variant.Filled" Color="Color.Default" OnClick="Close" Size="Size.Medium" Style="margin-top:30px;">Close</MudButton>
+        </MudItem>
+    </MudGrid>

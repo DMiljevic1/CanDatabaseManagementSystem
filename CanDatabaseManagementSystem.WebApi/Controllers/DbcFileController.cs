@@ -1,6 +1,8 @@
-﻿using CanDatabaseManagementSystem.Contract;
+﻿using CanDatabaseManagementSystem.Common.DtoModels;
+using CanDatabaseManagementSystem.Contract;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading;
 
 namespace CanDatabaseManagementSystem.WebApi.Controllers
 {
@@ -26,5 +28,20 @@ namespace CanDatabaseManagementSystem.WebApi.Controllers
                 throw;
 			}
 		}
+
+		[HttpPost("UploadDbcFile")]
+		public async Task<IActionResult> UploadDbcFile([FromBody] DbcFileData dbcFileData, CancellationToken cancellationToken)
+		{
+            try
+            {
+				await _dbcFileService.UploadDbcFile(dbcFileData, cancellationToken);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                throw;
+            }
+        }
 	}
 }

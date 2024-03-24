@@ -10,5 +10,6 @@ namespace DomainModels.Repositories
 	public interface IDbcFileRepository
 	{
 		Task<List<DbcFile>> GetDbcFiles(CancellationToken cancellationToken);
+		Task AddDbcFile(DbcFile dbcFile, CancellationToken cancellationToken);
 	}
 }

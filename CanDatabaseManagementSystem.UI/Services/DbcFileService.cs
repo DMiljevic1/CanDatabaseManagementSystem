@@ -1,5 +1,8 @@
 ﻿using CanDatabaseManagementSystem.Common.DtoModels;
 using CanDatabaseManagementSystem.UI.IServices;
+using System.Net.Http.Headers;
+using System.Text.Json;
+using System.Text;
 
 namespace CanDatabaseManagementSystem.UI.Services
 {
@@ -16,5 +19,12 @@ namespace CanDatabaseManagementSystem.UI.Services
 		{
             return await _httpClient.GetFromJsonAsync<List<DbcFileDto>>($"{_configuration["Endpoints:GetDbcFiles"]}");
         }
-	}
+
+        public async Task UploadDbcFile(DbcFileData dbcFileData)
+        {
+            var httpPostRequest = new HttpRequestMessage(HttpMethod.Post, $"{_configuration["Endpoints:UploadDbcFile"]}");
+            httpPostRequest.Content = new StringContent(JsonSerializer.Serialize(dbcFileData), Encoding.UTF8, "application/json");
+            await _httpClient.SendAsync(httpPostRequest);
+        }
+    }
 }

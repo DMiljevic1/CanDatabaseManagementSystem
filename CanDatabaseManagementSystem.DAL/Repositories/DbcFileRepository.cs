@@ -18,7 +18,16 @@ namespace CanDatabaseManagementSystem.DAL.Repositories
 			_canDatabaseContext = canDatabaseContext;
 		}
 
-		public async Task<List<DbcFile>> GetDbcFiles(CancellationToken cancellationToken)
+        public async Task AddDbcFile(DbcFile dbcFile, CancellationToken cancellationToken)
+        {
+			if(dbcFile != null)
+			{
+                await _canDatabaseContext.DbcFiles.AddAsync(dbcFile, cancellationToken);
+                await _canDatabaseContext.SaveChangesAsync();
+            }
+        }
+
+        public async Task<List<DbcFile>> GetDbcFiles(CancellationToken cancellationToken)
 		{
 			return await _canDatabaseContext.DbcFiles.ToListAsync(cancellationToken);
 		}

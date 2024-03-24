@@ -1,25 +1,40 @@
 ﻿@page "/"
 @inherits RazorPageBases.DbcFileListBase;
 
-<MudTable Items="@dbcFiles" Style="width:50%">
-    <ToolBarContent>
-        <MudText Typo="Typo.h6">Dbc Files</MudText>
-        <MudSpacer />
-    </ToolBarContent>
-    <NoRecordsContent>
-        No records found.
-    </NoRecordsContent>
-    <HeaderContent>
-        <MudTh>Name</MudTh>
-        <MudTh></MudTh>
-    </HeaderContent>
-    <RowTemplate>
-        <MudTd DataLabel="Name">@context.Name</MudTd>
-        <MudTd>
-            <MudButton OnClick="() => OpenMessageListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info" Size="Size.Small">Messages</MudButton>
-        </MudTd>
-        </RowTemplate>
-        <PagerContent>
-            <MudTablePager />
-        </PagerContent>
-    </MudTable>
+<MudTable Items="@dbcFiles" Style="width:50%; margin-bottom:20px;">
+<ToolBarContent>
+    <MudText Typo="Typo.h6">Dbc Files</MudText>
+    <MudSpacer />
+</ToolBarContent>
+<NoRecordsContent>
+    No records found.
+</NoRecordsContent>
+<HeaderContent>
+    <MudTh>Name</MudTh>
+    <MudTh></MudTh>
+</HeaderContent>
+<RowTemplate>
+    <MudTd DataLabel="Name">@context.Name</MudTd>
+    <MudTd>
+        <MudButton OnClick="() => OpenMessageListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info" Size="Size.Small">Messages</MudButton>
+    </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>
+<MudGrid Justify="Justify.FlexStart">
+    <MudItem>
+            <InputFile id="uploadFileId"
+                       OnChange="@(e => this.UploadDbcFile(e))"
+                       hidden
+                       multiple />
+            <MudButton HtmlTag="label"
+                       Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       StartIcon="@Icons.Material.Filled.CloudUpload"
+                       for="uploadFileId">
+                Upload Files
+            </MudButton>
+    </MudItem>
+</MudGrid>

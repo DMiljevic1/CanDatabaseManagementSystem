@@ -44,6 +44,7 @@ namespace CanDatabaseManagementSystem.IOC
 			services.AddSingleton(mappingConfig.CreateMapper());
 			services.AddScoped<IDbcFileService, DbcFileService>();
 			services.AddScoped<IMessageService, MessageService>();
+			services.AddScoped<IDbcFileParserService, DbcFileParserService>();
 		}
 		public static void ApplyMigrations(this IApplicationBuilder app)
 		{

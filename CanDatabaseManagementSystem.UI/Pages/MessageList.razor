@@ -11,12 +11,12 @@
         No records found.
     </NoRecordsContent>
     <HeaderContent>
-        <MudTh>Id</MudTh>
+        <MudTh>CanMessageId</MudTh>
         <MudTh>Name</MudTh>
         <MudTh></MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="Id">@context.Id</MudTd>
+        <MudTd DataLabel="Id">@context.CanMessageId</MudTd>
             <MudTd DataLabel="Name">@context.Name</MudTd>
             <MudTd>
                 <MudButton OnClick="() => OpenSignalListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info" Size="Size.Small">Signals</MudButton>

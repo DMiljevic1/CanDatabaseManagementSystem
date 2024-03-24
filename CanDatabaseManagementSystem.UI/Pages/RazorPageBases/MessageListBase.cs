@@ -21,5 +21,10 @@ namespace CanDatabaseManagementSystem.UI.Pages.RazorPageBases
         {
             _navigationManager.NavigateTo("/");
         }
+
+        protected void OpenSignalListPage(int messageId)
+        {
+            _navigationManager.NavigateTo("/SignalList/" + int.Parse(dbcFileId) + "/" + messageId);
+        }
     }
 }

@@ -21,6 +21,7 @@ builder.Services.AddScoped(provider =>
 });
 builder.Services.AddScoped<IDbcFileService, DbcFileService>();
 builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<ISignalService, SignalService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

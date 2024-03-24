@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CanDatabaseManagementSystem.Contract\CanDatabaseManagementSystem.Contract.csproj" />
-    <ProjectReference Include="..\..\CanDatabaseManagementSystem.Service\CanDatabaseManagementSystem.Service.csproj" />
+    <ProjectReference Include="..\CanDatabaseManagementSystem.Contract\CanDatabaseManagementSystem.Contract.csproj" />
     <ProjectReference Include="..\CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj" />
+    <ProjectReference Include="..\CanDatabaseManagementSystem.Service\CanDatabaseManagementSystem.Service.csproj" />
   </ItemGroup>
 
 </Project>

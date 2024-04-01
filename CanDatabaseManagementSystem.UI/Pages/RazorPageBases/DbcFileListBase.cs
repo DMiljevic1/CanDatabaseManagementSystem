@@ -34,5 +34,10 @@ namespace CanDatabaseManagementSystem.UI.Pages.RazorPageBases
             await _dbcFileService.UploadDbcFile(dbcFileData);
             dbcFiles = await _dbcFileService.GetDbcFiles();
         }
+        protected async Task DeleteDbcFile(int dbcFileId)
+        {
+            await _dbcFileService.DeleteDbcFile(dbcFileId);
+            dbcFiles = await _dbcFileService.GetDbcFiles();
+        }
     }
 }

@@ -11,6 +11,6 @@ namespace CanDatabaseManagementSystem.Contract
 	{
 		Task<List<DbcFileDto>> GetDbcFiles(CancellationToken cancellationToken);
 		Task UploadDbcFile(DbcFileData dbcFileData, CancellationToken cancellation);
-
+		Task DeleteDbcFile(int dbcFileId, CancellationToken cancellationToken);
     }
 }

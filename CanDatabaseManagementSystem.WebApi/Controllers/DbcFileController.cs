@@ -43,5 +43,20 @@ namespace CanDatabaseManagementSystem.WebApi.Controllers
                 throw;
             }
         }
+
+        [HttpDelete("DeleteDbcFile/{dbcFileId:int}")]
+        public async Task<IActionResult> DeleteDbcFile(int dbcFileId, CancellationToken cancellationToken)
+		{
+            try
+            {
+                await _dbcFileService.DeleteDbcFile(dbcFileId, cancellationToken);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("error: " + e);
+                throw;
+            }
+        }
 	}
 }

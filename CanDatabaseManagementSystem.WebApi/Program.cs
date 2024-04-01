@@ -1,5 +1,6 @@
 using CanDatabaseManagementSystem.DAL.DatabaseContext;
 using CanDatabaseManagementSystem.IOC;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureServices(builder.Configuration);
+builder.Services.ConfigureLogging(builder);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,7 +21,7 @@ if (app.Environment.IsDevelopment())
 	app.UseSwaggerUI();
 	app.ApplyMigrations();
 }
-
+app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

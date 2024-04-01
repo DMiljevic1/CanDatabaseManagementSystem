@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using CanDatabaseManagementSystem.Service;
 using AutoMapper;
 using CanDatabaseManagementSystem.Service.Mapping;
+using Serilog;
 
 namespace CanDatabaseManagementSystem.IOC
 {
@@ -25,7 +26,11 @@ namespace CanDatabaseManagementSystem.IOC
 			ConfigureRepositories(services, configuration);
 			ConfigureApplicationServices(services, configuration);
 		}
-		private static void ConfigureRepositories(IServiceCollection services, IConfiguration configuration)
+        public static void ConfigureLogging(this IServiceCollection services, WebApplicationBuilder builder)
+        {
+            builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+        }
+        private static void ConfigureRepositories(IServiceCollection services, IConfiguration configuration)
 		{
 			services.AddDbContext<CanDatabaseContext>(options => options.UseSqlServer(
 			configuration.GetConnectionString("CanDatabaseConnection")
@@ -56,5 +61,5 @@ namespace CanDatabaseManagementSystem.IOC
 
 			dbContext.Database.Migrate();
 		}
-	}
+    }
 }

@@ -23,7 +23,12 @@ namespace CanDatabaseManagementSystem.Service
 			_dbcFileParserService = dbcFileParserService;
 		}
 
-		public async Task<List<DbcFileDto>> GetDbcFiles(CancellationToken cancellationToken)
+        public async Task DeleteDbcFile(int dbcFileId, CancellationToken cancellationToken)
+        {
+            await _dbcFileRepository.DeleteDbcFile(dbcFileId, cancellationToken);
+        }
+
+        public async Task<List<DbcFileDto>> GetDbcFiles(CancellationToken cancellationToken)
 		{
 			var dbcFiles = await _dbcFileRepository.GetDbcFiles(cancellationToken);
 			var dbcFileDtos = new List<DbcFileDto>();

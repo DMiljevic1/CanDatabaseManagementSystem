@@ -12,11 +12,15 @@
 <HeaderContent>
     <MudTh>Name</MudTh>
     <MudTh></MudTh>
+    <MudTh></MudTh>
 </HeaderContent>
 <RowTemplate>
     <MudTd DataLabel="Name">@context.Name</MudTd>
     <MudTd>
-        <MudButton OnClick="() => OpenMessageListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info" Size="Size.Small">Messages</MudButton>
+        <MudButton OnClick="() => OpenMessageListPage(context.Id)" Variant="Variant.Filled" Color="Color.Info" Size="Size.Small">MESSAGES</MudButton>
+    </MudTd>
+    <MudTd>
+                <MudButton OnClick="() => DeleteDbcFile(context.Id)" Variant="Variant.Filled" Style="color:red" Size="Size.Small" StartIcon="@Icons.Material.Filled.Delete">DELETE</MudButton>
     </MudTd>
     </RowTemplate>
     <PagerContent>

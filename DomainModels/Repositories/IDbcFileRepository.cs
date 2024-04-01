@@ -11,5 +11,6 @@ namespace DomainModels.Repositories
 	{
 		Task<List<DbcFile>> GetDbcFiles(CancellationToken cancellationToken);
 		Task AddDbcFile(DbcFile dbcFile, CancellationToken cancellationToken);
+		Task DeleteDbcFile(int dbcFileId, CancellationToken cancellationToken);
 	}
 }

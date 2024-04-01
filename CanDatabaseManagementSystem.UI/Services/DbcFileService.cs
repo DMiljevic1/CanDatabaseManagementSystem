@@ -15,7 +15,14 @@ namespace CanDatabaseManagementSystem.UI.Services
 			_httpClient = httpClient;
 			_configuration = configuration;
 		}
-		public async Task<List<DbcFileDto>> GetDbcFiles()
+
+        public async Task DeleteDbcFile(int dbcFileId)
+        {
+            var httpDeleteRequest = new HttpRequestMessage(HttpMethod.Delete, $"{_configuration["Endpoints:DeleteDbcFile"]}/{dbcFileId}");
+            await _httpClient.SendAsync(httpDeleteRequest);
+        }
+
+        public async Task<List<DbcFileDto>> GetDbcFiles()
 		{
             return await _httpClient.GetFromJsonAsync<List<DbcFileDto>>($"{_configuration["Endpoints:GetDbcFiles"]}");
         }

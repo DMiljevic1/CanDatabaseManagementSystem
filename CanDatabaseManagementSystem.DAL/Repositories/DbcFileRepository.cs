@@ -27,6 +27,21 @@ namespace CanDatabaseManagementSystem.DAL.Repositories
             }
         }
 
+        public async Task DeleteDbcFile(int dbcFileId, CancellationToken cancellationToken)
+        {
+			var dbcFileForDelete = await GetDbcFile(dbcFileId);
+            if(dbcFileForDelete != null)
+			{
+				_canDatabaseContext.DbcFiles.Remove(dbcFileForDelete);
+                await _canDatabaseContext.SaveChangesAsync(cancellationToken);
+            }
+        }
+		private async Task<DbcFile?> GetDbcFile(int dbcFileId)
+		{
+			var dbcFile = await _canDatabaseContext.DbcFiles.FirstOrDefaultAsync(dbc => dbc.Id == dbcFileId);
+			return dbcFile;
+		}
+
         public async Task<List<DbcFile>> GetDbcFiles(CancellationToken cancellationToken)
 		{
 			return await _canDatabaseContext.DbcFiles.ToListAsync(cancellationToken);

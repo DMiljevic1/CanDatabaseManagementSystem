@@ -6,5 +6,6 @@ namespace CanDatabaseManagementSystem.UI.IServices
 	{
 		Task<List<DbcFileDto>> GetDbcFiles();
 		Task UploadDbcFile(DbcFileData dbcFileData);
+		Task DeleteDbcFile(int dbcFileId);
 	}
 }

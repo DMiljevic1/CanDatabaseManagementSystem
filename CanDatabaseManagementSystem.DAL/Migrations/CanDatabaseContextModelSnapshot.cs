@@ -21,7 +21,7 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DomainModels.Models.DbcFile", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.DbcFile", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.ToTable("DbcFiles");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.Message", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.Message", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,7 +63,7 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.NetworkNode", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.NetworkNode", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -85,7 +85,7 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.ToTable("NetworkNodes");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.Signal", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.Signal", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -113,9 +113,9 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.ToTable("Signals");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.Message", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.Message", b =>
                 {
-                    b.HasOne("DomainModels.Models.DbcFile", "DbcFile")
+                    b.HasOne("CanDatabaseManagementSystem.Domain.Models.DbcFile", "DbcFile")
                         .WithMany("Messages")
                         .HasForeignKey("DbcFileId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -124,9 +124,9 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.Navigation("DbcFile");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.NetworkNode", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.NetworkNode", b =>
                 {
-                    b.HasOne("DomainModels.Models.DbcFile", "DbcFile")
+                    b.HasOne("CanDatabaseManagementSystem.Domain.Models.DbcFile", "DbcFile")
                         .WithMany("NetworkNodes")
                         .HasForeignKey("DbcFileId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -135,9 +135,9 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.Navigation("DbcFile");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.Signal", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.Signal", b =>
                 {
-                    b.HasOne("DomainModels.Models.Message", "Message")
+                    b.HasOne("CanDatabaseManagementSystem.Domain.Models.Message", "Message")
                         .WithMany("Signals")
                         .HasForeignKey("MessageId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -146,14 +146,14 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.Navigation("Message");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.DbcFile", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.DbcFile", b =>
                 {
                     b.Navigation("Messages");
 
                     b.Navigation("NetworkNodes");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.Message", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.Message", b =>
                 {
                     b.Navigation("Signals");
                 });

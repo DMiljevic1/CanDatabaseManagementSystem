@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DomainModels\DomainModels.csproj" />
+    <ProjectReference Include="..\DomainModels\CanDatabaseManagementSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>

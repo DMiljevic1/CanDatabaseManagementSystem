@@ -1,6 +1,6 @@
 ﻿using CanDatabaseManagementSystem.DAL.DatabaseContext;
-using DomainModels.Models;
-using DomainModels.Repositories;
+using CanDatabaseManagementSystem.Domain.Models;
+using CanDatabaseManagementSystem.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

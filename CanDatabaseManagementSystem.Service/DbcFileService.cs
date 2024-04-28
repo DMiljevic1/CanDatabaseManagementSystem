@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using CanDatabaseManagementSystem.Common.DtoModels;
 using CanDatabaseManagementSystem.Contract;
-using DomainModels.Models;
-using DomainModels.Repositories;
+using CanDatabaseManagementSystem.Domain.Models;
+using CanDatabaseManagementSystem.Domain.Repositories;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

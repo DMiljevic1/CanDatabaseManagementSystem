@@ -1,11 +1,11 @@
-﻿using DomainModels.Models;
+﻿using CanDatabaseManagementSystem.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DomainModels.Repositories
+namespace CanDatabaseManagementSystem.Domain.Repositories
 {
     public interface ISignalRepository
     {

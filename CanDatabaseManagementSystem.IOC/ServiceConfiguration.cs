@@ -1,7 +1,7 @@
 ﻿using CanDatabaseManagementSystem.Contract;
 using CanDatabaseManagementSystem.DAL.DatabaseContext;
 using CanDatabaseManagementSystem.DAL.Repositories;
-using DomainModels.Repositories;
+using CanDatabaseManagementSystem.Domain.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

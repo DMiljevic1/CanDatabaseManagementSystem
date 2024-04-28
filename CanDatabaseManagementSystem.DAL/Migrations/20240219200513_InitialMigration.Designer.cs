@@ -24,7 +24,7 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DomainModels.Models.Message", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.Message", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -41,7 +41,7 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.NetworkNode", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.NetworkNode", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +58,7 @@ namespace CanDatabaseManagementSystem.DAL.Migrations
                     b.ToTable("NetworkNodes");
                 });
 
-            modelBuilder.Entity("DomainModels.Models.Signal", b =>
+            modelBuilder.Entity("CanDatabaseManagementSystem.Domain.Models.Signal", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

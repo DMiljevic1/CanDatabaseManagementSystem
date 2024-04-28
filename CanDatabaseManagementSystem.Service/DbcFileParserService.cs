@@ -1,6 +1,6 @@
 ﻿using CanDatabaseManagementSystem.Common.DtoModels;
 using CanDatabaseManagementSystem.Contract;
-using DomainModels.Models;
+using CanDatabaseManagementSystem.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

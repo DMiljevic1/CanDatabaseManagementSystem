@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CanDatabaseManagementSystem.Common\CanDatabaseManagementSystem.Common.csproj" />
-    <ProjectReference Include="..\DomainModels\DomainModels.csproj" />
+    <ProjectReference Include="..\DomainModels\CanDatabaseManagementSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>

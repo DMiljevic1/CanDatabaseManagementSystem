@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.WebApi", "CanDatabaseManagementSystem.WebApi\CanDatabaseManagementSystem.WebApi.csproj", "{43CA17A4-3C3D-4537-BF9A-8A655FD404CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainModels", "DomainModels\DomainModels.csproj", "{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.Domain", "DomainModels\CanDatabaseManagementSystem.Domain.csproj", "{A097B409-5E0A-4BF1-B1E0-5E6E64C0F8BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanDatabaseManagementSystem.DAL", "CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj", "{02852A8E-F079-4912-A1DA-E4A5DDD28470}"
 EndProject

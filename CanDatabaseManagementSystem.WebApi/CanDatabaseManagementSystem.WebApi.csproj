@@ -31,7 +31,7 @@
     <ProjectReference Include="..\CanDatabaseManagementSystem.Contract\CanDatabaseManagementSystem.Contract.csproj" />
     <ProjectReference Include="..\CanDatabaseManagementSystem.DAL\CanDatabaseManagementSystem.DAL.csproj" />
     <ProjectReference Include="..\CanDatabaseManagementSystem.IOC\CanDatabaseManagementSystem.IOC.csproj" />
-    <ProjectReference Include="..\DomainModels\DomainModels.csproj" />
+    <ProjectReference Include="..\DomainModels\CanDatabaseManagementSystem.Domain.csproj" />
   </ItemGroup>
 
 </Project>
